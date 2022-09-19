@@ -12,17 +12,17 @@
  * @returns {boolean}
 */
 
-class Solution{
-    isBinary(str){
+class Solution {
+    isBinary(str) {
         //code here
-str = str.toString()
-let isbinary = false;
-if(str.length!=1){
- if(str.includes("0") && str.includes("1")) isbinary = true;
-}
-else{
-if(str.includes("0") || str.includes("1")) isbinary = true;
-}
-return isbinary
+        str = str.toString()
+        let isbinary = false;
+        if (str.length != 1) {
+            if (str.includes("0") && str.includes("1")) isbinary = true;
+        }
+        else {
+            if (str.includes("0") || str.includes("1")) isbinary = true;
+        }
+        return isbinary
     }
 }
