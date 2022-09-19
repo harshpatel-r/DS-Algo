@@ -14,10 +14,7 @@ pick it (0-1 property).
 
 // SOLUTION 
 
-
-
 //User function Template for javascript
-
 
 /**
  * @param {number} W
@@ -30,7 +27,7 @@ pick it (0-1 property).
 class Solution {
 
     //Function to return max value that can be put in knapsack of capacity W.
-    
+
     knapSack(W, wt, val, n) {
         let dp = Array.from(Array(n + 1), () => new Array(W + 1));
 
