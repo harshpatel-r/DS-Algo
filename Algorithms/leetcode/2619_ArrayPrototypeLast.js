@@ -7,13 +7,14 @@ last element. If there are no elements in the array, it should return -1.
 
 // SOLUTION
 
-Array.prototype.last = function() {
+Array.prototype.last = function () {
     let n = this.length;
 
-    if(n===0){
+    if (n === 0) {
         return -1;
     }
-    return this[n-1];
+    
+    return this[n - 1];
 };
 
 /**
