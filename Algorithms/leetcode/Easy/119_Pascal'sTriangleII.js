@@ -7,7 +7,8 @@ In Pascal's triangle, each number is the sum of the two numbers directly above i
 https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif
 */
 
-// SOLUTION 1
+// SOLUTION
+
 
 /**
  * @param {number} r
@@ -23,37 +24,4 @@ var getRow = function (r) {
     }
 
     return ans
-};
-
-// SOLUTION 2
-
-/**
- * @param {number} rowIndex
- * @return {number[]}
- */
-
-var getRow = function (rowIndex) {
-    let num = rowIndex + 1;
-    let res = [];
-
-    for (let i = 1; i <= num; i++) {
-        let arr = []
-
-        for (let j = 0; j < i; j++) {
-            if (j == 0 || j == i - 1) {
-                arr.push(1);
-            } else {
-                let sum = res[0][j - 1] + res[0][j]
-                arr.push(sum);
-            }
-        }
-
-        res.push(arr);
-        if (i > 1) {
-            res.shift()
-        }
-
-    }
-
-    return res[0];
 };
