@@ -7,13 +7,38 @@ Given an unsorted integer array nums, return the smallest missing positive integ
 You must implement an algorithm that runs in O(n) time and uses constant extra space.
 */
 
-// SOLUTION
 
+// SOLUTION 1 : [Modified Solution (20/04/2024)]
 
 /**
  * @param {number[]} nums
  * @return {number}
  */
+
+var firstMissingPositive = function (nums) {
+    for (let i = 0; i < nums.length; i++) {
+        let elem = nums[i];
+        if (elem < nums.length && elem > 0 && nums[elem - 1] !== elem) {
+            nums[i] = nums[elem - 1];
+            nums[elem - 1] = elem;
+            i--;
+        }
+    }
+
+    let posNum = 1;
+    for (let i = 0; i < nums.length; i++) {
+        if (posNum < nums[i]) {
+            return posNum;
+        } else if (posNum === nums[i]) {
+            posNum++;
+        }
+    }
+
+    return posNum;
+};
+
+
+// SOLUTION 2 : [Old Solution]
 
 var firstMissingPositive = function (nums) {
     nums = [...new Set(nums)];
