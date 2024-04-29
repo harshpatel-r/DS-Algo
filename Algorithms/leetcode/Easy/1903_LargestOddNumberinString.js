@@ -9,7 +9,7 @@ A substring is a contiguous sequence of characters within a string.
 */
 
 
-// SOLUTION:
+// SOLUTION :
 
 /**
  * @param {string} num
