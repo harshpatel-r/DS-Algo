@@ -1,4 +1,3 @@
-
 //# 1903. Largest Odd Number in String
 
 /*
@@ -9,7 +8,7 @@ A substring is a contiguous sequence of characters within a string.
 */
 
 
-// SOLUTION :
+// SOLUTION:
 
 /**
  * @param {string} num
@@ -22,6 +21,7 @@ var largestOddNumber = function (num) {
             return num.slice(0, i + 1);
         }
     }
-
+  
     return "";
-};
+  };
+  
